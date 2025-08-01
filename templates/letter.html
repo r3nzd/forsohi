@@ -1,24 +1,55 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Our Letter</title>
+    <meta charset="UTF-8">
+    <title>From Aarush, With Love</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
     <div class="letter-container">
-        <div class="photos">
-            <img src="{{ url_for('static', filename='img1.jpg') }}" />
-            <img src="{{ url_for('static', filename='img2.jpg') }}" />
-            <img src="{{ url_for('static', filename='img3.jpg') }}" />
-        </div>
-        <div class="letter-text">{{ letter }}</div>
 
-        <iframe style="border-radius:12px" 
-                src="https://open.spotify.com/embed/track/6jgkEbmQ2F2onEqsEhiliL?utm_source=generator" 
-                 width="100%" height="80" frameBorder="0" 
-    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
-    loading="lazy">
-        </iframe>
+        <!-- Photos -->
+        <div class="photos">
+            <img src="{{ url_for('static', filename='img1.jpg') }}">
+            <img src="{{ url_for('static', filename='img2.jpg') }}">
+            <img src="{{ url_for('static', filename='img3.jpg') }}">
+        </div>
+
+        <!-- Love Letter -->
+        <div class="letter-text">
+            <p>hiiii shahanaaa!!!!!</p>
+            <p>i made this for u cuz i told you i'd give something to you on august 1 and well today is august 1!!</p>
+            <p>hehehehehhe i love youuu</p>
+            <p>okay so basically i dont really know how to put this in to words but i'll try anyways</p>
+            <p>like since the day i met you every moment has become a memory i want to keep forever!!!!!!!!</p>
+            <p>it can be the way you laugh or the way you make every normal moment feel so nice, i love it alll</p>
+            <p>i made this little website for you because i wanted to do something that would make you feel like nice? idk</p>
+            <p>these pictures are like small glimpses of all the beautiful moments we've shared</p>
+            <p>this song (i may have asked u ur fav artist for this) reminds me of you and makes me think of you every time i hear it</p>
+            <p>but this letter is me telling you that you mean more to me than you'll ever know</p>
+            <p>youre literally my favorite</p>
+            <p>i love you so much</p>
+            <p>aarush</p>
+            <br>
+            <p>alsoooo... <strong>happy girlfriend's day!!!</strong></p>
+            <p>i seriously don't know how i got this lucky</p>
+            <p>out of everyone in the world, i got you??? that still blows my mind</p>
+            <p>you make everything feel better just by being there</p>
+            <p>your laugh, your voice, your hugs, even your random little rants — i love all of it</p>
+            <p>you make my world softer and warmer and honestly just... right</p>
+            <p>thank you for being mine</p>
+            <p>i love you so so so so much ♡</p>
+        </div>
+
+        <!-- Mac DeMarco Song -->
+        <div style="margin-top: 2em;">
+            <iframe style="border-radius:12px"
+                    src="https://open.spotify.com/embed/track/6jgkEbmQ2F2onEqsEhiliL?utm_source=generator"
+                    width="100%" height="80" frameborder="0"
+                    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                    loading="lazy">
+            </iframe>
+        </div>
     </div>
 </body>
 </html>
