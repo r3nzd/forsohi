@@ -1,41 +1,127 @@
+/* ==== BASE ==== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
-    background-color: pink;
-    font-family: 'Segoe UI', sans-serif;
-    text-align: center;
-    animation: fadeIn 2s ease-in;
+    font-family: -apple-system, BlinkMacSystemFont, 'San Francisco', 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    background: linear-gradient(135deg, #ffe4f0 0%, #fbe1ff 100%);
+    color: #1e1e1e;
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
 }
 
+/* ==== CONTAINER ==== */
+.container, .letter-container {
+    width: 100%;
+    max-width: 800px;
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 30px;
+    padding: 3rem 2rem;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(25px) saturate(120%);
+    -webkit-backdrop-filter: blur(25px) saturate(120%);
+    box-shadow: 0 4px 30px rgba(255, 128, 189, 0.2);
+    animation: fadeIn 1.2s ease forwards;
+    opacity: 0;
+}
+
+/* ==== HEADINGS ==== */
 h1 {
-    font-size: 3em;
-    margin-top: 20vh;
+    font-size: 2.8em;
+    font-weight: 700;
+    text-align: center;
+    color: #ff3c95;
+    text-shadow: 0 2px 10px rgba(255, 119, 180, 0.3);
+    margin-bottom: 1.5rem;
 }
 
+/* ==== BUTTON ==== */
 .btn {
-    background-color: maroon;
-    color: white;
+    display: inline-block;
+    background: rgba(255, 255, 255, 0.2);
+    color: #ff3c95;
+    font-weight: 600;
     padding: 1em 2em;
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.4);
     text-decoration: none;
-    font-weight: bold;
-    border-radius: 15px;
-    transition: background-color 0.3s;
+    font-size: 1.1em;
+    backdrop-filter: blur(10px);
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 20px rgba(255, 128, 189, 0.2);
 }
 
 .btn:hover {
-    background-color: darkred;
+    background: rgba(255, 255, 255, 0.4);
+    color: #ff007f;
+    transform: scale(1.05);
 }
 
-.letter-container {
-    margin: 2em auto;
-    width: 80%;
+/* ==== LETTER TEXT ==== */
+.letter-text {
+    margin-top: 1rem;
+    padding: 1rem;
+}
+
+.letter-text p {
+    opacity: 0;
+    transform: translateY(10px);
+    animation: riseIn 0.6s ease forwards;
+    animation-delay: calc(var(--i) * 0.15s);
+    margin-bottom: 1em;
+    line-height: 1.7;
+    font-size: 1.1rem;
+}
+
+/* ==== PHOTOS ==== */
+.photos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 30px;
 }
 
 .photos img {
-    width: 200px;
-    margin: 10px;
-    border-radius: 10px;
+    width: 160px;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 20px;
+    box-shadow: 0 6px 18px rgba(255, 128, 189, 0.25);
+}
+
+/* ==== ANIMATIONS ==== */
+@keyframes riseIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 @keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
+    to {
+        opacity: 1;
+    }
+}
+
+/* ==== RESPONSIVE ==== */
+@media screen and (max-width: 600px) {
+    .container, .letter-container {
+        padding: 2rem 1.2rem;
+    }
+
+    h1 {
+        font-size: 2em;
+    }
+
+    .photos img {
+        width: 120px;
+        height: 120px;
+    }
 }
